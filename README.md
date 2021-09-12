@@ -1,7 +1,5 @@
-# discord-ui-clone
-Discord UI Clone in HTML
-
-> Help me to improve this!!! 😊
+# DiscordCloneUI
+🚩Discord Clone UI Hope You Like it
 
 # Preview
 **[https://healer-op.github.io/DiscordCloneUI/](https://healer-op.github.io/DiscordCloneUI/)**
