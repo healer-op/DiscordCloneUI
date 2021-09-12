@@ -27,8 +27,29 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hi" style="text-align: center; margin-top: 100%;">
+                    <div class="hi" style="text-align: center; justify-content: center; margin-top: 100%;">
+                        <div id="hi">
                         <p>👋 Hi Thanks For Looking in to my latest project. Hope You Enjoy Also i will be very Glad If you Can ⭐Star My Repo. <a href="https://github.com/healer-op/DiscordCloneUI" target="_blank">Click Here</a></a></p>
+                        </div>
+                        <div id="hio" style="display: none;">
+                            <p>Change Your Pfp</p>
+                            <input type="file" accept="image/*" onchange="loadFile(event)">
+                            <script>
+                              var loadFile = function(event) {
+                                var name=prompt("Enter your discord name");
+                                document.getElementById("nameu").innerHTML=name;
+                                var tag=prompt("Enter You #4531 without #");
+                                document.getElementById("tagu").innerHTML="#"+tag;
+                                var output = document.getElementById('pfp');
+                                output.src = URL.createObjectURL(event.target.files[0]);
+                                output.onload = function() {
+                                  URL.revokeObjectURL(output.src) // free memory
+                                  document.getElementById("hi").style.display = "block";
+                                  document.getElementById("hio").style.display = "none";
+                                }
+                              };
+                            </script>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -41,7 +62,14 @@
                 <div class="usermenuicons">
                     <div class="mic" id="micToggle"></div>
                     <div class="headphone" id="headphoneToggle" onclick="Deafen();"></div>
-                    <div class="settings" id="settingsToggle" onclick="change();"></div>
+                    <div class="settings" id="settingsToggle" onclick="change1();"></div>
+                    <script>
+                        function change1(){
+                            document.getElementById("hio").style.display = "block";
+                            document.getElementById("hi").style.display = "none";
+                        }
+                        
+                    </script>
                 </div>
             </div>
         </div>
